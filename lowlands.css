@@ -1,0 +1,494 @@
+@font-face {
+    font-family: "repro89";
+    src: url("fonts/repro89-regular-webfont.woff");
+}
+
+* {
+    box-sizing: border-box
+}
+
+header {
+    width: 100;
+
+}
+
+h1 {
+    font-family: repro89;
+    color: white;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    max-width: 95vw;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+body {
+    margin: 0;
+    background-color: #0033cc;
+
+}
+
+nav {
+    background-color: #0033cc;
+}
+
+nav:first-child ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1vh;
+    margin: 0;
+}
+
+nav:first-child {
+    position: fixed;
+    width: 100%;
+    background-color: #0033cc;
+    z-index: 1000;
+}
+
+/*hamburger*/
+nav:first-child li button {
+    padding: 0;
+    border: none;
+    background: none;
+}
+
+nav:first-child img {
+    width: 50%;
+
+}
+
+nav:first-child a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+nav:first-child a:hover {
+    background-color: #0033cc;
+}
+
+nav:first-child button img {
+    display: none;
+}
+
+@media screen and (max-width: 1020px) {
+    nav:first-child a:not(img) {
+        display: none;
+    }
+
+
+    nav button img:last-child {
+        float: right;
+        display: block;
+    }
+}
+
+/* weghalen hamburger menu bij fullscreen */
+@media screen and (min-width: 1020px) {
+    .hamburger {
+        display: none;
+    }
+}
+
+.hamburger {
+    height: 100%;
+    width: 12em;
+    position: fixed;
+    top: auto;
+    right: -12em;
+    transition: .3s;
+    z-index: 1;
+
+}
+
+.hamburger ul {
+    margin-left: 1em;
+    margin-top: 4em;
+
+
+}
+
+.hamburger a:hover {
+    color: #44D362;
+    padding: 0.7vw;
+
+}
+
+.hamburger ul li {
+    margin-top: 1vh;
+
+}
+
+.hamburger a {
+    font-size: 1.2em;
+}
+
+
+.hamburger {
+    color: black;
+}
+
+.verschijn {
+    right: 0;
+}
+
+/*programma*/
+a {
+    font-family: repro89;
+    text-decoration: none;
+    color: white;
+}
+
+nav:first-child a:hover {
+    color: #44D362;
+}
+
+header > img:last-child {
+    width: 100vw;
+}
+
+/* bron uitklap categorien- https://www.w3schools.com/howto/howto_js_collapsible.asp*/
+.collapsible {
+    background-color: #44D362;
+    box-shadow: inset 0px 0px 94px -6px rgba(0, 0, 0, 0.75);
+    color: white;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 1em;
+
+}
+
+.active,
+.collapsible:hover {
+    background-color: #69c368;
+}
+
+.content {
+    padding-left: 1vw;
+    display: none;
+    background-color: #f1f1f1;
+    margin-bottom: 1vh;
+}
+
+.content ul {
+    list-style: none;
+    display: flex;
+    justify-content: flex-start;
+    padding: 1vh;
+    margin: 0;
+}
+
+.content li input {
+    margin-right: 2vw;
+}
+
+/* einde uitklap checkbox */
+
+form label {
+    font-family: 'Manjari', sans-serif;
+    color: black;
+    font-size: 1em;
+}
+
+form ul li button {
+    background-color: #0033cc;
+    color: white;
+    padding: 2vh;
+    margin-left: 1vw;
+}
+
+form ul li:nth-child(6) button:hover {
+    background-color: red;
+}
+
+form ul li:nth-child(6) button:focus {
+    background-color: red;
+}
+
+/* einde uitklap */
+
+main article button:active {
+    color: aqua;
+}
+
+article {
+    background-color: #44D362;
+    padding: 2vh;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1vh;
+    margin-top: 1vh;
+    box-shadow: inset 0px 0px 94px -6px rgba(0, 0, 0, 0.75);
+}
+
+article img {
+    width: 100vw;
+    text-align: center;
+    max-width: 100%
+}
+
+article p {
+    color: white;
+    font-family: repro89;
+}
+
+article h2 {
+    font-family: repro89;
+    font-size: 2em;
+    color: black;
+}
+
+article button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 3em;
+    align-items: center;
+}
+
+
+
+article button:nth-child(2) {
+    font-size: 2em;
+}
+
+/* bron: transitie zoom in --> https://css-tricks.com/snippets/css/scale-on-hover-with-webkit-transition/ */
+.zoom article {
+    transition: all .2s ease-in-out;
+}
+
+.zoom article:hover {
+    transform: scale(1.1);
+}
+
+/* breakpoint 1 "grote artiesten" */
+
+@media (min-width:60em) {
+    body > main > section:nth-child(4) {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 1vw
+    }
+}
+
+/* b artiest */
+
+.bartiest article {}
+
+@media (min-width:10em) {
+    .bartiest {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 1vw;
+    }
+}
+
+/* breakpoint 1 "kleine artiesten" */
+
+@media (min-width:50em) {
+    .bartiest {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 1vw;
+    }
+}
+
+/* breakpoint 2 "kleine artiesten" */
+
+@media (min-width:100em) {
+    .bartiest {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 1vw;
+    }
+}
+
+/*tame impala artiest*/
+.tameimpala main {
+    max-width: 80%;
+}
+
+.tameimpala a:first-child:hover {
+    color: #44D362;
+}
+
+.tameimpala header {
+    margin: 1vw;
+}
+
+.tameimpala article {
+    background-color: #44D362;
+    box-shadow: inset 0px 0px 94px -6px rgba(0, 0, 0, 0.75);
+    margin-top: 3vh;
+    width: 70%;
+    padding: 2vw;
+}
+
+.tameimpala h1 {
+    font-family: repro89;
+    font-size: 4em;
+}
+
+.tameimpala h2 {
+    color: white;
+    font-family: repro89;
+
+}
+
+.tameimpala button {
+    width: 5vw;
+    position: absolute;
+
+
+}
+
+.tameimpala h3 {
+    font-family: repro89;
+    size: 3em;
+    color: white;
+
+}
+
+.tameimpala p {
+    font-family: 'Manjari', sans-serif;
+}
+
+.tameimpala ul {
+    top: 0;
+    overflow: auto;
+}
+
+article:nth-child(3) {
+    color: white;
+    font-family: repro89;
+}
+
+.tameimpala article:nth-child(2) {
+    display: flex;
+    justify-content: space-around;
+
+}
+
+.tameimpala li {
+    color: #E8E8E8;
+    list-style: none;
+    padding: 0.5vh;
+
+}
+
+.tameimpala li:hover:nth-last-child(1) {
+    color: white;
+}
+
+.tameimpala article iframe {
+    min-height: 20em;
+    width: 100%;
+    margin-right: 2vw;
+
+}
+
+/* form focus input - bron: https://www.w3schools.com/css/css_form.asp*/
+.tameimpala form fieldset {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 3vh;
+    padding: 2vw;
+    width: 70%;
+    background-color: #44D362;
+    box-shadow: inset 0px 0px 94px -6px rgba(0, 0, 0, 0.75);
+}
+
+.tameimpala legend {
+    font-family: repro89;
+    color: white;
+    font-size: 1.5em;
+}
+
+input
+
+/*[type=text] */
+    {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 1px solid #555;
+    outline: none;
+    transition: all .2s ease-in-out;
+}
+
+input:hover {
+    transform: scale(1.05);
+}
+
+input:focus {
+    background-color: lightgray;
+}
+
+input:last-child:focus {
+    background-color: #0033cc;
+    color: white;
+}
+
+input:last-child:hover {
+    background-color: #0033cc;
+    color: white;
+}
+
+.tameimpala form label {
+    color: white;
+    font-family: repro89;
+}
+
+.tameimpala form input {
+    font-family: Manjari;
+    font-size: 1em;
+}
+
+.tameimpala form {
+    margin-bottom: 2vh;
+}
+
+
+/*footer*/
+footer h3 {
+    font-family: repro89;
+    color: white
+}
+
+footer ul {
+    display: flex;
+    padding: 0;
+}
+
+footer li {
+    list-style: none;
+    margin-right: 1vw;
+
+}
+
+footer {
+    padding: 2vw;
+}
