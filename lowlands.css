@@ -149,11 +149,15 @@ nav:first-child button img {
 }
 
 /*programma*/
-a {
+nav a,
+section a,
+header a,
+.tameimpala article a {
     font-family: repro89;
     text-decoration: none;
     color: white;
 }
+
 
 nav:first-child a:hover {
     color: #44D362;
@@ -175,7 +179,6 @@ header > img:last-child {
     text-align: left;
     outline: none;
     font-size: 1em;
-
 }
 
 .active,
@@ -190,19 +193,23 @@ header > img:last-child {
     margin-bottom: 1vh;
 }
 
-.content ul {
+.content form {
     list-style: none;
     display: flex;
     justify-content: flex-start;
+    align-items: center;
     padding: 1vh;
     margin: 0;
 }
 
-.content li input {
-    margin-right: 2vw;
+.content input {
+    margin: 1vw;
 }
 
-/* einde uitklap checkbox */
+.content button a {
+    text-decoration: none;
+    color: white;
+}
 
 form label {
     font-family: 'Manjari', sans-serif;
@@ -210,18 +217,18 @@ form label {
     font-size: 1em;
 }
 
-form ul li button {
+form button {
     background-color: #0033cc;
     color: white;
     padding: 2vh;
     margin-left: 1vw;
 }
 
-form ul li:nth-child(6) button:hover {
+form button:nth-child(10):hover {
     background-color: red;
 }
 
-form ul li:nth-child(6) button:focus {
+form button:nth-child(10):focus {
     background-color: red;
 }
 
@@ -267,8 +274,6 @@ article button {
     align-items: center;
 }
 
-
-
 article button:nth-child(2) {
     font-size: 2em;
 }
@@ -283,19 +288,15 @@ article button:nth-child(2) {
 }
 
 /* breakpoint 1 "grote artiesten" */
-
 @media (min-width:60em) {
-    body > main > section:nth-child(4) {
+    body > main > section:nth-child(4):not(h2) {
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-gap: 1vw
     }
 }
 
-/* b artiest */
-
-.bartiest article {}
-
+/* breakpoint 1 "kleine artiesten" */
 @media (min-width:10em) {
     .bartiest {
         display: grid;
@@ -304,8 +305,7 @@ article button:nth-child(2) {
     }
 }
 
-/* breakpoint 1 "kleine artiesten" */
-
+/* breakpoint 2 "kleine artiesten" */
 @media (min-width:50em) {
     .bartiest {
         display: grid;
@@ -314,8 +314,7 @@ article button:nth-child(2) {
     }
 }
 
-/* breakpoint 2 "kleine artiesten" */
-
+/* breakpoint 3 "kleine artiesten" */
 @media (min-width:100em) {
     .bartiest {
         display: grid;
@@ -326,7 +325,7 @@ article button:nth-child(2) {
 
 /*tame impala artiest*/
 .tameimpala main {
-    max-width: 80%;
+    max-width: 90%;
 }
 
 .tameimpala a:first-child:hover {
@@ -353,21 +352,17 @@ article button:nth-child(2) {
 .tameimpala h2 {
     color: white;
     font-family: repro89;
-
 }
 
 .tameimpala button {
     width: 5vw;
     position: absolute;
-
-
 }
 
 .tameimpala h3 {
     font-family: repro89;
     size: 3em;
     color: white;
-
 }
 
 .tameimpala p {
@@ -387,14 +382,12 @@ article:nth-child(3) {
 .tameimpala article:nth-child(2) {
     display: flex;
     justify-content: space-around;
-
 }
 
 .tameimpala li {
     color: #E8E8E8;
     list-style: none;
     padding: 0.5vh;
-
 }
 
 .tameimpala li:hover:nth-last-child(1) {
@@ -404,7 +397,7 @@ article:nth-child(3) {
 .tameimpala article iframe {
     min-height: 20em;
     width: 100%;
-    margin-right: 2vw;
+    margin-right: 0.2vw;
 
 }
 
@@ -426,11 +419,18 @@ article:nth-child(3) {
     font-size: 1.5em;
 }
 
-input
+.tameimpala input {
+    width: 100%;
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+    padding: 1vh;
+}
+
+
+.tameimpala input:last-child
 
 /*[type=text] */
     {
-    width: 100%;
     padding: 12px 20px;
     margin: 8px 0;
     box-sizing: border-box;

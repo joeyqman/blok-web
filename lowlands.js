@@ -23,14 +23,14 @@ for (i = 0; i < openKlap.length; i++) {
 
 var button = document.querySelector('#knop');
 var nav = document.querySelector('.hamburger');
-var afbeelding = document.querySelector('#knop > img')
+var afbeelding = document.querySelector('#knop > img');
 
 
 function hierbenik() {
     nav.classList.toggle('verschijn');
 }
 
-button.addEventListener('click', hierbenik)
+button.addEventListener('click', hierbenik);
 
 /*hamburger naar kruis */
 /* bronnen: https://www.w3schools.com/jsref/met_element_getattribute.asp & https://www.w3schools.com/js/js_if_else.asp */
@@ -40,7 +40,7 @@ function verander() {
         afbeelding.src = "img/close.png";
 
     } else {
-        afbeelding.src = "img/hamburger.png"
+        afbeelding.src = "img/hamburger.png";
     }
 }
 
